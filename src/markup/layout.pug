@@ -1,0 +1,42 @@
+include mixins
+include components
+
+block variables
+  - let theme = '#880088';
+  - let title = 'Vite App';
+
+doctype html
+html(lang="ru")
+  head
+    title #{title}
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="theme-color" content=theme)
+    meta(name="apple-mobile-web-app-status-bar-style" content=theme)
+    meta(name="format-detection" content="telephone=no")
+    meta(name="description" content="")
+    meta(name="keywords" content="")
+    meta(name="author" content="Валентин <astrotrain55@gmail.com>")
+    meta(name="copyright" content='Валентин <astrotrain55@gmail.com>')
+    meta(property="og:type" content="website")
+    meta(property="og:locale" content="ru_RU")
+    meta(property="og:url" content="")
+    meta(property="og:title" content=title)
+    meta(property="og:site_name" content="")
+    meta(property="og:description" content="")
+    meta(property="og:image" content="./favicon.svg")
+    link(rel="icon" type="image/svg+xml" href="./favicon.svg")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css")
+  body
+    #app
+      .l-page#top
+        .l-container
+          +header()
+          main.l-content
+            block content
+        +footer()
+        +debug()
+      +templates()
+    +dev-paginator()
+    script(type="module" src="./src/main.ts")

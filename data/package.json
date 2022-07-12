@@ -1,0 +1,33 @@
+{
+  "author": "Валентин <astrotrain55@gmail.com>",
+  "scripts": {
+    "reset": "git fetch --all && git reset --hard origin/master",
+    "create": "node ./src/components/createModule",
+    "grid": "node ./src/assets/smartgrid.js",
+    "list": "./manual/grep.sh list",
+    "once": "./manual/grep.sh once",
+    "full": "./manual/grep.sh full"
+  },
+  "dependencies": {
+    "@ungap/custom-event": "^0.3.0",
+    "@ungap/json": "^1.1.0",
+    "@ungap/url-search-params": "^0.2.0",
+    "dialog-polyfill": "^0.5.1",
+    "eventslibjs": "^1.2.0",
+    "smooth-scroll": "^16.1.3"
+  },
+  "devDependencies": {
+    "circular-dependency-plugin": "^5.2.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.0.1",
+    "css-loader": "^3.5.2",
+    "csscomb-webpack-plugin": "^0.3.8",
+    "get-port": "^5.1.1",
+    "group-css-media-queries-loader": "^3.0.2",
+    "html-webpack-harddisk-plugin": "^1.0.1",
+    "material-components-web": "^3.0.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "pug-html-loader": "^1.1.5",
+    "terser-webpack-plugin": "^2.3.5"
+  }
+}
